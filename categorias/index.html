@@ -1267,29 +1267,28 @@
 
 
 
-  <!-- NEW FOOTER -->
-
   <footer class="footer-no-gap">
   <br>
   <div class="container">
     <div class="footer-grid">
 
        <!-- Logo centrado abajo -->
-    <div class="contenedor-logo">
-      <img src="../assets/images/exito-logo.jpeg" class="logo">
-    </div>
+    <div class="fila-superior">
+  <div class="contenedor-logo">
+    <img src="../assets/images/exito-logo.jpeg" class="logo">
+  </div>
 
-      <!-- Izquierda (Ayuda) -->
-      <div class="footer-left">
-        <h4>Ayuda</h4>
-        <ul>
-          <li><a href="tel:+50376106996">Llamar</a></li>
-          <li><a href="http://wa.me/+50376106996">WhatsApp</a></li>
-          <li><a href="mailto:sistemadeexito24@gmail.com">Correo</a></li>
-          <li><a href="https://corteconfeccion.com" target="_blank">CorteConfección</a></li>
-        </ul>
-        
-      </div>
+  <div class="footer-left">
+    <h4 style="color: white;">Ayuda</h4><BR>
+    <ul>
+      <li><a style="color: white;" href="tel:+50376106996">Llamar</a></li>
+      <li><a style="color: white;" href="http://wa.me/+50376106996">WhatsApp</a></li>
+      <li><a style="color: white;" href="mailto:sistemadeexito24@gmail.com">Correo</a></li>
+      <li><a style="color: white;" href="https://corteconfeccion.com" target="_blank">CorteConfección</a></li>
+    </ul>
+  </div>
+</div>
+
 
       <!-- Derecha (Copyright) -->
       <div class="footer-right">
@@ -1310,47 +1309,85 @@
 <style>
 .footer-grid {
   display: flex !important;
-  justify-content: space-between !important;
+  justify-content: space-between !important; /* LOGO - AYUDA - COPY */
   align-items: flex-start !important;
-  flex-wrap: wrap !important;
+  width: 100%;
   color: #f6f6f6 !important;
-  margin-bottom: 20px !important;
 }
 
-.footer-left h4,
-.footer-left ul,
-.footer-right p {
-  color: #f6f6f6 !important;
-  margin: 0 !important;
-}
-
-.footer-left ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin-top: 10px !important;
-}
-
-.footer-left ul li {
-  margin-bottom: 5px !important;
-}
-
-.footer-left ul li a {
-  color: #f6f6f6 !important;
-  text-decoration: none !important;
-}
-
+/* LOGO IZQUIERDA */
 .contenedor-logo {
-  display: flex !important;
-  justify-content: center !important;
-  margin-top: 25px !important;
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
 }
 
-/* LOGO MÁS GRANDE */
-.logo {
-  width: 250px !important;   /* ← Tamaño del logo */
-  display: block !important;
-  margin: 0 auto !important;
+/* AYUDA CENTRO */
+.fila-superior {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
 }
+
+.footer-left {
+  text-align: center !important; /* EN PC CENTRADO */
+}
+
+/* COPYRIGHT DERECHA */
+.footer-right {
+  text-align: right !important;
+}
+
+.logo {
+  width: 250px !important;
+}
+
+  /* LOGO IZQUIERDA + AYUDA DERECHA */
+  /* MOVIL */
+
+  /* LOGO IZQUIERDA + AYUDA DERECHA */
+
+
+@media (max-width: 768px) {
+
+  /* Cambia a columna */
+  .footer-grid {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* LOGO IZQUIERDA + AYUDA DERECHA */
+  .fila-superior {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  /* Logo pequeño */
+  .logo {
+    width: 150px !important;
+  }
+
+  /* Ayuda a la derecha */
+  .footer-left {
+    text-align: right !important;
+  }
+
+  .footer-left h4,
+  .footer-left ul {
+    text-align: right !important;
+  }
+
+  /* Copyright centrado */
+  .footer-right {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+  }
+}
+
+
 
 </style>
   
